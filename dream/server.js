@@ -12,7 +12,7 @@ app.use(cors());
 app.use(express.json());
 
 app.post('/dream', async (req, res) => {
-    const client = createClient('TbTDRNGMfGgUe4LwAJf97IXEnMyIXP1vAJL87xAUThlF3a7C1sNICyYd');
+    const client = createClient(process.env.PEXELS);
     const query = req.body.prompt;
     
     client.photos.search({ query, per_page: 1 }).then(photos => {
