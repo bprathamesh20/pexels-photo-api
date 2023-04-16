@@ -21,6 +21,6 @@ app.post('/dream', async (req, res) => {
     });
 
 })
-
-app.listen(8080, () => console.log('make art on http://localhost:8080/dream'));
+let port = process.env.PORT || 3000
+app.listen(port, () => console.log('make art on http://localhost:8080/dream'));
 
